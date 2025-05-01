@@ -1,7 +1,7 @@
 import pygame as pg
 from random import randrange
 
-WINDOW = 400
+WINDOW = 1000
 
 def main():
     screen = pg.display.set_mode((WINDOW, WINDOW))
