@@ -1,12 +1,13 @@
 import pygame as pg
 from random import randrange
+import os
 
-WINDOW = 400
+WINDOW = 1000
 
 def main():
     screen = pg.display.set_mode((WINDOW, WINDOW))
     clock = pg.time.Clock()
-    pg.display.set_caption("Snake Game")
+    pg.display.set_caption("Dyani's Snake Game!")
     snake = [(5, 5), (5, 6), (5, 7)]
     direction = (1, 0)
     apple = (randrange(0, WINDOW // 10), randrange(0, WINDOW // 10))
@@ -50,5 +51,26 @@ def main():
         pg.display.set_caption(f"Snake Game - Score: {score}")
 
 
+def readHighScore():
+    score = 0
+    try:
+        with open("high_score.txt") as f:
+           score = int(f.readineline().strip())
+    except ValueError:
+        print(f"high_score file corrupted.")
+    except FileNotFoundError:
+        print(f"No high_score file found.")
+        return score 
+
+def writeHighScore(new_score):
+    cwd = os.getcwd()
+    print(f"my current directory is {cwd}")
+    os.chdir("scores")
+    with open("high_score.txt", mode = 'w') as f: 
+     f.write(str(new_score))
+ 
+
+            
+           
 if __name__ == "__main__":
     main()
