@@ -38,6 +38,10 @@ O'Reilly Book Resource
 
 The Python Workshop - Second Edition
 
+[python_modules_explained]
+
+[python_quiz]
+
 ## Class Software
 
 [mysql]
@@ -89,3 +93,5 @@ The Python Workshop - Second Edition
 [joins_are_easy]: <https://www.youtube.com/watch?v=G3lJAxg1cy8>
 [joins_explained]: <https://www.youtube.com/watch?v=9yeOJ0ZMUYw>
 [google]: <https://google.com>
+[python_modules_explained]: <https://www.youtube.com/watch?v=Yh5gcLG6C3Q>
+[python_quiz]: <https://www.geeksforgeeks.org/python-quizzes/>
